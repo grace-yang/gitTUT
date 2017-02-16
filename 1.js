@@ -87,27 +87,4 @@ function() {
 			var e={};
 			e[q]=o.max;
 			var f=o.max-c[i];
-			var g=c[i]/f;h.addClass('active').animate(e,{step:function(a){
-							var b=f!=0?a/f-g:1;k.each(function(j){
-								if(j!=i){
-									k.eq(j).css(q,c[j]-((c[j]-o.min)*b)+'px')
-								}
-								if(j>0&&j<k.size()-1){
-									k.eq(j).css(r,d[j]-((d[j]-m[i][j])*b)+'px')
-								}
-							})
-						},duration:o.duration,easing:o.easing})})});
-					if(!o.sticky){container.bind("mouseleave",function(){
-						var c=[];var d=[];k.removeClass('active').stop();
-						for(i=0;i<k.size();i++){
-							c[i]=k.eq(i).css(q).replace(/px/,'');
-							d[i]=k.eq(i).css(r).replace(/px/,'')
-						}
-						var e={};e[q]=l;
-						var f=l-c[0];k.eq(0).animate(e,{step:function(a){
-							var b=f!=0?(a-c[0])/f:1;
-							for(i=1;i<k.size();i++){
-								k.eq(i).css(q,c[i]-((c[i]-l)*b)+'px');
-								if(i<k.size()-1){
-								k.eq(i).css(r,d[i]-((d[i]-((i*l)+(i*o.spacing)))*b)+'px')}
-							}},duration:o.duration,easing:o.easing})})}})}})(jQuery);
+			
